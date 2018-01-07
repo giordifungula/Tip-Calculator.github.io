@@ -1,0 +1,112 @@
+body {
+    background: #333;
+    background: url('../img/cutlery.jpg')  center left no-repeat ;
+    background-size: cover;
+}
+
+.jumbotron {
+    width: 450px;
+    position: relative;
+    margin: 40px auto;
+    padding: 50px;
+    background: #eee;
+    border-radius: 50px;
+    text-align: center;
+}
+
+form {
+    text-align: left;
+}
+form input,
+form select {
+    padding: 8px;
+    margin: 10px 0;
+}
+form label {
+    display: block;
+}
+button {
+    background: #6ccccc;
+    color: white;
+    border: none;
+    border-bottom: solid 4px #222;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 20px 30px;
+    width: 100%;
+}
+
+button:hover {
+    background: #1ccccc;
+    border-bottom-color: #111;
+}
+
+button:active {
+    position: relative;
+    top: 1px;
+}
+form input[type='text']{
+    width: 90px;
+}
+
+#doneEating h1{
+    animation-name: doneEating;
+    animation-duration: 2s;
+    position: relative;
+    margin: 0 auto;
+    color: #6ccccc;
+    font-weight: 800;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    text-shadow: 10px 2px 1px #621;
+}
+@keyframes doneEating{
+    0% {
+        opacity: 0;
+        
+        transform: translateY(-100px);
+    }
+    
+    100% {
+        opacity: 1;
+       
+    }
+}
+
+#totalTip {
+    font-size: 50px;
+    margin-top: 40px;
+    display: none;
+}
+#each {
+    display: none;
+}
+#afterEat {
+    display: none;
+    animation-name: afterEat;
+    animation-duration: 3s;
+}
+@keyframes afterEat {
+    0% {
+        opacity: 0;
+        transform: translateX(-100x);
+    }
+    100% {
+        opacity: 1;
+        transition: 
+            translateX(100);
+    }
+}
+
+#totalTip:before {
+    content: "Tip amount";
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    text-transform: uppercase;
+}
+#totalTip sup {
+    font-size: 24px;
+    top: -18px;
+}
